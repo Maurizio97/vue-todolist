@@ -3,3 +3,49 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #38c7a3;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    margin-top: 30px;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px 50px; 
+    background-color: white;
+}
+
+.cross {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 3px;
+    font-weight: bold;
+    color: red;
+}
+
+.check {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: green;
+    padding: 3px;
+
+}
+
+ul {
+    margin-top: 7px;
+}
+
+li {
+    line-height: 1.6;
+}
