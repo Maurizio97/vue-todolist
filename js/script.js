@@ -24,7 +24,7 @@ var toDoList = new Vue({
         textNewTask: "",
         tasks: [
             {
-                "text": "fare la spesa","done": true
+                "text": "fare la spesa","done": false
             },
             {
                 "text": "Portare a spasso il cane","done": false
@@ -33,7 +33,7 @@ var toDoList = new Vue({
                 "text": "Programmare","done": true
             },
             {
-                "text": "Allenamento","done": true
+                "text": "Allenamento","done": false
             },            
         ]
     },
@@ -51,7 +51,7 @@ var toDoList = new Vue({
         addTask(){
             newTask = {
                 "text": this.textNewTask,
-                "done": "false"
+                "done": false
             };
             this.tasks.push(newTask);
             this.textNewTask = "";
