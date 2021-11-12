@@ -21,6 +21,7 @@
 var toDoList = new Vue({
     el: "#todolist",
     data: {
+        textNewTask: "",
         tasks: [
             {
                 "text": "fare la spesa","done": "true"
@@ -35,5 +36,31 @@ var toDoList = new Vue({
                 "text": "Allenamento","done": "true"
             },            
         ]
-    }
+    },
+    methods: {
+        deleteTask(index){
+            this.tasks.splice(index, 1);
+        },
+        taskDone(index){
+            if(this.tasks[index].done === "false"){
+                this.tasks[index].done = "true";
+            } else {
+                this.tasks[index].done = "false";
+            }
+        },
+        addTask(){
+            newTask = {
+                "text": "",
+                "done": "false"
+            };
+            newTask.text = this.textNewTask;
+
+            this.tasks.push(newTask);
+
+            this.textNewTask = "";
+            /* this.newTask.text = ""; */
+        }
+
+    },
+
 });

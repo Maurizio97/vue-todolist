@@ -23,6 +23,10 @@ h1 {
     background-color: white;
 }
 
+h2 {
+    margin-top: 7px;
+}
+
 .cross {
     display: inline-block;
     cursor: pointer;
@@ -40,6 +44,10 @@ h1 {
     color: green;
     padding: 3px;
 
+}
+
+.done {
+    text-decoration: line-through;
 }
 
 ul {
