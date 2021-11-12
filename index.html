@@ -15,7 +15,7 @@
         <h2 v-if="tasks.length === 0">La tua lista è vuota&#33;&#33;&#33;&#33;</h2>
         <ul v-else>
             <li v-for="task, i in tasks" :key="i">
-                <span :class="task.done === 'true'? 'done' : ''">{{ task.text }}</span>
+                <span :class="task.done? 'done' : ''">{{ task.text }}</span>
                 <div @click="taskDone(i)" class="check">
                     &#10003;
                 </div> 

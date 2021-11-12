@@ -24,16 +24,16 @@ var toDoList = new Vue({
         textNewTask: "",
         tasks: [
             {
-                "text": "fare la spesa","done": "true"
+                "text": "fare la spesa","done": true
             },
             {
-                "text": "Portare a spasso il cane","done": "false"
+                "text": "Portare a spasso il cane","done": false
             },
             {
-                "text": "Programmare","done": "true"
+                "text": "Programmare","done": true
             },
             {
-                "text": "Allenamento","done": "true"
+                "text": "Allenamento","done": true
             },            
         ]
     },
@@ -42,23 +42,19 @@ var toDoList = new Vue({
             this.tasks.splice(index, 1);
         },
         taskDone(index){
-            if(this.tasks[index].done === "false"){
-                this.tasks[index].done = "true";
+            if(!this.tasks[index].done){
+                this.tasks[index].done = true;
             } else {
-                this.tasks[index].done = "false";
+                this.tasks[index].done = false;
             }
         },
         addTask(){
             newTask = {
-                "text": "",
+                "text": this.textNewTask,
                 "done": "false"
             };
-            newTask.text = this.textNewTask;
-
             this.tasks.push(newTask);
-
             this.textNewTask = "";
-            /* this.newTask.text = ""; */
         }
 
     },
